@@ -26,7 +26,7 @@ def project_context(config_loader):
         package_name="brazilian_credit_card_spending",
         project_path=Path.cwd(),
         config_loader=config_loader,
-        env='base',
+        env="base",
         hook_manager=_create_hook_manager(),
     )
 
