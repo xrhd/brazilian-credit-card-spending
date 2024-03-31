@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 # brazilian_credit_card_spending documentation build
@@ -20,8 +19,8 @@
 #
 import re
 
-from kedro.framework.cli.utils import find_stylesheets
 from brazilian_credit_card_spending import __version__ as release
+from kedro.framework.cli.utils import find_stylesheets
 
 # -- Project information -----------------------------------------------------
 
