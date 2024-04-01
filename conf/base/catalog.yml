@@ -11,8 +11,5 @@ mibolsillo:
     skip_blank_lines: True
 
 preprocessed_mibolsillo:
-  type: pandas.CSVDataset
-  filepath: data/02_intermediate/preprocessed_mibolsillo.csv
-  load_args:
-    encoding: 'utf-8'
-    parse_dates: ['date']
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/preprocessed_mibolsillo.pq
