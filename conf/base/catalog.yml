@@ -3,11 +3,16 @@ mibolsillo:
   filepath: data/01_raw/encoded-MiBolsillo.csv
   load_args:
     sep: ';'
-    encoding: 'latin_1'
+    encoding: 'utf-8'
     names: ['id','branch_number','city','state','age','gender','total_credit_card_limit','current_available_limit' ,'date','amount','category_expense','purchase_city','purchase_country']
     parse_dates: ['date']
+    date_format: "%d.%m.%Y"
     skiprows: 1
+    skip_blank_lines: True
 
 preprocessed_mibolsillo:
-  type: pandas.ParquetDataset
-  filepath: data/02_intermediate/preprocessed_mibolsillo.pq
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/preprocessed_mibolsillo.csv
+  load_args:
+    encoding: 'utf-8'
+    parse_dates: ['date']

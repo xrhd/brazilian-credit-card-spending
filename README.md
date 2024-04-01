@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 Install Kedro Docker
 ```
-pip install kedro-docker==0.2.1
+pip install kedro-docker
 ```
 
 Generate a Dockerfile
