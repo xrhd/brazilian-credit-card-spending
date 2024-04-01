@@ -13,3 +13,8 @@ mibolsillo:
 preprocessed_mibolsillo:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/preprocessed_mibolsillo.pq
+
+cleaned_mibolsillo:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/cleaned_mibolsillo.pq
+  versioned: true

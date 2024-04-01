@@ -22,3 +22,15 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
     for col in ["state", "city", "purchase_city"]:
         df[col] = df[col].str.strip().str.upper()
     return df
+
+
+def clean(df: pd.DataFrame) -> pd.DataFrame:
+    """Cleans the data.
+
+    Args:
+        df: Preprocessed data.
+    Returns:
+        Cleaned data, with rows with missing values removed.
+    """
+    mask = df.amount > 0
+    return df[mask].dropna()
