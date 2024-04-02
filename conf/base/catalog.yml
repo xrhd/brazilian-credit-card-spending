@@ -16,5 +16,9 @@ preprocessed_mibolsillo:
 
 cleaned_mibolsillo:
   type: pandas.ParquetDataset
-  filepath: data/03_primary/cleaned_mibolsillo.pq
+  filepath: data/02_intermediate/cleaned_mibolsillo.pq
+
+prim_mibolsillo:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/prim_mibolsillo.pq
   versioned: true

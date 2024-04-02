@@ -33,4 +33,5 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         Cleaned data, with rows with missing values removed.
     """
     mask = df.amount > 0
+    mask |= df.purchase_country == "BR"
     return df[mask].dropna()
