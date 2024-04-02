@@ -2,8 +2,7 @@ import re
 
 import numpy as np
 import pandas as pd
-
-# from thefuzz import process
+from thefuzz import process
 
 
 def preprocess(df: pd.DataFrame) -> pd.DataFrame:
@@ -52,4 +51,17 @@ def fuzzy_merge(mib: pd.DataFrame, micro_region: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Merged dataframe.
     """
+    name_micro = micro_region["name_micro"].values.tolist()
+    geobr_purchase_cities = mib["purchase_city"].apply(
+        lambda x: process.extractOne(x, name_micro)
+    )
+
+    mib["geobr_purchase_city"] = geobr_purchase_cities.apply(lambda x: x[0])
+    mib["geobr_purchase_city_conf"] = geobr_purchase_cities.apply(lambda x: x[1] / 100)
+
+    mib["geobr_purchase_state"] = mib["geobr_purchase_city"].apply(
+        lambda x: micro_region[micro_region["name_micro"] == x]["abbrev_state"].values[
+            0
+        ]
+    )
     return mib

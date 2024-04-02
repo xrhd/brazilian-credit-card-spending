@@ -5,7 +5,7 @@ generated using Kedro 0.19.3
 
 from kedro.pipeline import Pipeline, node, pipeline
 
-from .nodes import clean, preprocess
+from .nodes import clean, fuzzy_merge, preprocess
 
 
 def create_pipeline(**kwargs) -> Pipeline:
@@ -22,6 +22,12 @@ def create_pipeline(**kwargs) -> Pipeline:
                 inputs="preprocessed_mibolsillo",
                 outputs="cleaned_mibolsillo",
                 name="clean_mibolsillo",
+            ),
+            node(
+                func=fuzzy_merge,
+                inputs=["preprocessed_mibolsillo", "micro_region"],
+                outputs="prim_mibolsillo",
+                name="fuzzy_merge",
             ),
         ]
     )
