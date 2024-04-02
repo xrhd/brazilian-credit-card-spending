@@ -1,3 +1,5 @@
+import re
+
 import numpy as np
 import pandas as pd
 
@@ -23,6 +25,8 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
     )
     for col in ["state", "city", "purchase_city"]:
         df[col] = df[col].str.strip().str.upper()
+        df[col] = df[col].apply(lambda s: re.sub("[a-z]+", " ", str(s)).strip())
+        df = df[df[col] != ""]  # drop empt strings
     return df
 
 
