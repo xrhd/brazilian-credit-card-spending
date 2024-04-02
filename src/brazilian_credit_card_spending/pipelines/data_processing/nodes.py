@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 
+# from thefuzz import process
+
 
 def preprocess(df: pd.DataFrame) -> pd.DataFrame:
     """Preprocesses the data.
@@ -35,3 +37,15 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     mask = df.amount > 0
     mask |= df.purchase_country == "BR"
     return df[mask].dropna()
+
+
+def fuzzy_merge(mib: pd.DataFrame, micro_region: pd.DataFrame) -> pd.DataFrame:
+    """Merges two dataframes using a fuzzy matching approach.
+
+    Args:
+        mib: The left dataframe.
+        micro_region: The right dataframe.
+    Returns:
+        Merged dataframe.
+    """
+    return mib
