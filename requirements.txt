@@ -7,3 +7,8 @@ kedro-viz>=6.7.0
 notebook
 kedro-docker~=0.5.0
 -r requirements.dev.txt
+
+numpy
+pandas
+geobr~=0.2.1
+html5lib~=1.1

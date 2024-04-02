@@ -1,3 +1,4 @@
+# from https://www.kaggle.com/code/sufyant/starter-brazilian-real-bank-dataset
 mibolsillo:
   type: pandas.CSVDataset
   filepath: data/01_raw/encoded-MiBolsillo.csv
@@ -9,6 +10,11 @@ mibolsillo:
     date_format: "%d.%m.%Y"
     skiprows: 1
     skip_blank_lines: True
+
+# from geobr.read_micro_region()
+micro_region:
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/micro_region.pq
 
 preprocessed_mibolsillo:
   type: pandas.ParquetDataset
