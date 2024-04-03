@@ -1,4 +1,5 @@
 expense_groups:
-    Necessities: ["SERVI‚O", "SUPERMERCADOS", "FARMACIAS", "POSTO DE GAS", "M.O.T.O."]
-    Discretionary: ["RESTAURANTE", "VAREJO", "VESTUARIO", "ARTIGOS ELETRO", "MOVEIS E DECOR", "AUTO PE‚AS", "JOALHERIA"]
-    Travel: ["CIA AEREAS", "HOTEIS", "AGENCIA DE TUR"]
+  Services: ["SERVI‚O", "RESTAURANTE"]
+  Necessities: [ "SUPERMERCADOS", "FARMACIAS", "POSTO DE GAS", "M.O.T.O."]
+  Discretionary: ["VAREJO", "VESTUARIO", "ARTIGOS ELETRO", "MOVEIS E DECOR", "AUTO PE‚AS", "JOALHERIA"]
+  Travel: ["CIA AEREAS", "HOTEIS", "AGENCIA DE TUR"]

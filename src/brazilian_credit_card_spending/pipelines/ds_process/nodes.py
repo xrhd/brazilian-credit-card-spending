@@ -61,4 +61,5 @@ def get_model_data(
 ) -> pd.DataFrame:
     model_data = _features(df)
     model_data["label"] = _labels(df, expense_groups)
+    model_data["category_expense"] = df["category_expense"]
     return model_data
