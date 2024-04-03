@@ -8,6 +8,7 @@ notebook
 kedro-docker~=0.5.0
 -r requirements.dev.txt
 
+kedro[all]
 numpy
 pandas
 thefuzz~=0.22.1

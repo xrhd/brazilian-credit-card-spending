@@ -1,1 +1,1 @@
-{"prim_mibolsillo": {"rows": 4900, "columns": 16, "file_size": 128}, "model_data": {"rows": 4900, "columns": 14, "file_size": 160}}
+{"prim_mibolsillo": {"rows": 4900, "columns": 16, "file_size": 128}, "model_data": {"rows": 4900, "columns": 14, "file_size": 576}, "X_train": {"rows": 3920, "columns": 12}, "X_test": {"rows": 980, "columns": 12}}

@@ -34,3 +34,13 @@ model_data:
   type: pandas.ParquetDataset
   filepath: data/04_model_input/model_data.pq
   versioned: true
+
+classifier:
+  type: pickle.PickleDataset
+  filepath: data/06_models/classifier.pickle
+  versioned: true
+
+metrics:
+  type: tracking.MetricsDataset
+  filepath: data/09_tracking/metrics.json
+  versioned: true
