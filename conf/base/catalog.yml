@@ -29,3 +29,8 @@ prim_mibolsillo:
   type: pandas.ParquetDataset
   filepath: data/03_primary/prim_mibolsillo.pq
   versioned: true
+
+model_data:
+  type: pandas.ParquetDataset
+  filepath: data/04_model_input/model_data.pq
+  versioned: true
