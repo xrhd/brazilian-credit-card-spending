@@ -2,7 +2,19 @@
 
 ## Overview
 
-This is your new Kedro project with Kedro-Viz setup, which was generated using `kedro 0.19.3`.
+MLops Poc Project
+
+This project is a proof-of-concept (PoC) for MLops (Machine Learning Operations). It utilizes the Brazilian Credit Card Spending dataset from Kaggle. The goal of this project is to demonstrate the implementation of MLops principles and practices in a real-world scenario.
+
+Key Features:
+- Data preprocessing: The dataset is preprocessed to handle missing values, outliers, and feature engineering.
+- Model training: Various machine learning algorithms are trained and evaluated to find the best performing model.
+- Model deployment: The selected model is deployed using a docker.
+- Monitoring and maintenance: In theory (given new data), the deployed model can continuously monitored for performance and retrained periodically to ensure accuracy.
+
+This project serves as a starting point for implementing MLops practices in credit expense category prediction. It provides a framework for handling data, training models, and deploying them in a production environment.
+
+For more information, refer to the project documentation and codebase.
 
 Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
 
