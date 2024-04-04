@@ -25,7 +25,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             ),
             node(
                 func=fuzzy_merge,
-                inputs=["preprocessed_mibolsillo", "micro_region"],
+                inputs=["cleaned_mibolsillo", "micro_region"],
                 outputs="prim_mibolsillo",
                 name="fuzzy_merge",
             ),
