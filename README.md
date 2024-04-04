@@ -1,5 +1,7 @@
 # Brazilian Credit Card Spending
 
+![kedro-pipeline](docs/imgs/kedro-pipeline.png)
+
 ## Overview
 
 MLops Poc Project
