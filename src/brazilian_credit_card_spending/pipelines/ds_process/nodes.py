@@ -16,7 +16,7 @@ from thefuzz import fuzz
 
 def _features(df: pd.DataFrame) -> pd.DataFrame:
     model_data = df[
-        ["total_credit_card_limit", "current_available_limit", "amount"]
+        ["total_credit_card_limit", "current_available_limit", "amount", "age"]
     ]  # take only numerical columns
 
     model_data["total_minus_current"] = (
