@@ -9,7 +9,7 @@ from .nodes import evaluate_model, get_model_data, split_data, train_model
 
 
 def create_pipeline(**kwargs) -> Pipeline:
-    return pipeline(
+    pipe_instance = pipeline(
         [
             node(
                 func=get_model_data,
@@ -36,3 +36,14 @@ def create_pipeline(**kwargs) -> Pipeline:
             ),
         ]
     )
+
+    base_modeling_pipeline = pipeline(
+        pipe=pipe_instance, inputs="prim_mibolsillo", namespace="base_modeling_pipeline"
+    )
+
+    candidate_modeling_pipeline = pipeline(
+        pipe=pipe_instance,
+        inputs="prim_mibolsillo",
+        namespace="candidate_modeling_pipeline",
+    )
+    return base_modeling_pipeline + candidate_modeling_pipeline

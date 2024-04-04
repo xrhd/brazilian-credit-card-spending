@@ -1,15 +1,48 @@
-model_options:
-  test_size: 0.2
-  random_state: 0
-  label:
-    label
-  features: [
-    'total_credit_card_limit', 
-    'current_available_limit', 
-    'amount',
-    'total_minus_current', 
-    'current_available_limit_ratio',
-    'amount_ratio_from_total', 
-    'amount_ratio_from_current', 'is_F', 'is_M',
-    'is_the_same_city', 'is_the_state', 'is_the_state_conf'
-  ]
+base_modeling_pipeline:
+  model_options:
+    test_size: 0.2
+    random_state: 0
+    label:
+      label
+    features: [
+      'total_credit_card_limit', 
+      'current_available_limit', 
+      'amount',
+      'total_minus_current', 
+      'current_available_limit_ratio',
+      'amount_ratio_from_total', 
+      'amount_ratio_from_current', 
+      'is_F', 
+      'is_M',
+    ]
+  expense_groups:
+    Services: ["SERVI‚O", "RESTAURANTE"]
+    Necessities: [ "SUPERMERCADOS", "FARMACIAS", "POSTO DE GAS", "M.O.T.O."]
+    Discretionary: ["VAREJO", "VESTUARIO", "ARTIGOS ELETRO", "MOVEIS E DECOR", "AUTO PE‚AS", "JOALHERIA"]
+    Travel: ["CIA AEREAS", "HOTEIS", "AGENCIA DE TUR"]
+
+candidate_modeling_pipeline:
+  model_options:
+    test_size: 0.2
+    random_state: 0
+    label:
+      label
+    features: [
+      'total_credit_card_limit', 
+      'current_available_limit', 
+      'amount',
+      'total_minus_current', 
+      'current_available_limit_ratio',
+      'amount_ratio_from_total', 
+      'amount_ratio_from_current', 
+      'is_F', 
+      'is_M',
+      'is_the_same_city', 
+      'is_the_state', 
+      'is_the_state_conf'
+    ]
+  expense_groups:
+    Services: ["SERVI‚O", "RESTAURANTE"]
+    Necessities: [ "SUPERMERCADOS", "FARMACIAS", "POSTO DE GAS", "M.O.T.O."]
+    Discretionary: ["VAREJO", "VESTUARIO", "ARTIGOS ELETRO", "MOVEIS E DECOR", "AUTO PE‚AS", "JOALHERIA"]
+    Travel: ["CIA AEREAS", "HOTEIS", "AGENCIA DE TUR"]

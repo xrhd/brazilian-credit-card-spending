@@ -44,3 +44,13 @@ metrics:
   type: tracking.MetricsDataset
   filepath: data/09_tracking/metrics.json
   versioned: true
+
+"{sub_type}_modeling_pipeline.classifier":
+  type: pickle.PickleDataset
+  filepath: data/06_models/{sub_type}_classifier.pickle
+  versioned: true
+
+"{sub_type}_modeling_pipeline.metrics":
+  type: tracking.MetricsDataset
+  filepath: data/09_tracking/{sub_type}_metrics.json
+  versioned: true

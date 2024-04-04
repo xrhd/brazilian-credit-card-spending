@@ -39,7 +39,7 @@ def _features(df: pd.DataFrame) -> pd.DataFrame:
         lambda row: fuzz.ratio(row.city, row.purchase_city) / 100, axis=1
     )
     model_data["is_the_state"] = df.apply(
-        lambda row: fuzz.ratio(row.state, row.geobr_purchase_state) / 100, axis=1
+        lambda row: int(row.state == row.geobr_purchase_state), axis=1
     )
     model_data["is_the_state_conf"] = (
         model_data["is_the_state"] * df["geobr_purchase_city_conf"]

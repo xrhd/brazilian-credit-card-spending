@@ -35,6 +35,24 @@ In order to get the best out of the template:
 * Don't commit data to your repository
 * Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
 
+# Setup
+
+Create a new conda/mamba environment or read the [official documentation](https://docs.kedro.org/en/latest/get_started/install.html#how-to-create-a-new-virtual-environment-using-conda)
+
+```
+conda create -n mlops python=3.10 -y
+```
+or
+```
+mamba create -n mlops python=3.10 -c conda-force -y
+```
+
+Activate your environment
+
+```
+conda activate mlops
+```
+
 ## How to install dependencies
 
 Declare any dependencies in `requirements.txt` for `pip` installation.
@@ -43,6 +61,18 @@ To install them, run:
 
 ```
 pip install -r requirements.txt
+```
+
+## Package
+
+More on [[official documentation]](https://docs.kedro.org/en/latest/tutorial/package_a_project.html#package-a-kedro-project)
+
+```
+kedro package
+```
+
+```
+pip install dist/brazilian_credit_card_spending-0.1-py3-none-any.whl
 ```
 
 ## Docker
